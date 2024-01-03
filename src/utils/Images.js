@@ -1,4 +1,4 @@
-import Logo from '../assets/img/logo/logo.png'
+import Logo from '../assets/icons/logo.png'
 import SliderBg from '../assets/img/hero/h1_hero.jpg'
 import Design from '../assets/icons/design.png'
 import Desktop from '../assets/icons/desktop.png'

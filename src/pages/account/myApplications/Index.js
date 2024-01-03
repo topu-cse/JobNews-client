@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import jwtDecode from 'jwt-decode'
-import { Icon } from 'react-icons-kit'
-import { messageCircle } from 'react-icons-kit/feather'
+// import { Icon } from 'react-icons-kit'
+// import { messageCircle } from 'react-icons-kit/feather'
 
 import Requests from '../../../utils/Requests/Index'
 import Preloader from '../../../components/preloader/Index'
-import ChatLauncher from '../../../components/chat/Index'
+// import ChatLauncher from '../../../components/chat/Index'
 
 const Index = () => {
     const [applications, setApplications] = useState([])
     const [isLoading, setLoading] = useState(true)
     const [author, setAuthor] = useState(null)
-    const [reciver, setReciver] = useState(null)
-    const [open, setOpen] = useState(false)
+    // const [reciver, setReciver] = useState(null)
+    // const [open, setOpen] = useState(false)
     const [header] = useState({
         headers: { Authorization: "Bearer " + localStorage.getItem('token') }
     })
@@ -40,16 +40,16 @@ const Index = () => {
     }, [header, fetchData])
 
     // Handle message box open
-    const handleOpen = data => {
-        setReciver(data)
-        setOpen(true)
-    }
+    // const handleOpen = data => {
+    //     setReciver(data)
+    //     setOpen(true)
+    // }
 
-    // Handle close chat box
-    const handleClose = () => {
-        setOpen(true)
-        setReciver(null)
-    }
+    // // Handle close chat box
+    // const handleClose = () => {
+    //     setOpen(true)
+    //     setReciver(null)
+    // }
 
     if (isLoading) return <Preloader />
 
@@ -75,14 +75,14 @@ const Index = () => {
                                         <td style={{ minWidth: 250 }}>
                                             <div className="d-flex">
                                                 <div><p>Company : {item.createdBy.name}</p></div>
-                                                <div className="ml-auto">
+                                                {/* <div className="ml-auto">
                                                     <Icon
                                                         icon={messageCircle}
                                                         style={{ color: '#F4A261' }}
                                                         size={25}
                                                         onClick={() => handleOpen(item.createdBy)}
                                                     />
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <p>Website : {item.createdBy.website}</p>
                                             <p>Position : {item.title}</p>
@@ -96,14 +96,14 @@ const Index = () => {
                 </div>
             </div>
 
-            {reciver ?
+            {/* {reciver ?
                 <ChatLauncher
                     show={open}
                     author={author}
                     reciver={reciver}
                     onHide={handleClose}
                 />
-                : null}
+                : null} */}
         </div>
     );
 };

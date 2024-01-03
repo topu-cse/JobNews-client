@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
-import { Icon } from 'react-icons-kit'
-import { messageCircle } from 'react-icons-kit/feather'
+// import { Icon } from 'react-icons-kit'
+// import { messageCircle } from 'react-icons-kit/feather'
 import jwtDecode from 'jwt-decode'
 
 import Requests from '../../../utils/Requests/Index'
 import Preloader from '../../../components/preloader/Index'
-import ChatLauncher from '../../../components/chat/Index'
+// import ChatLauncher from '../../../components/chat/Index'
 
 const Index = () => {
     const { id } = useParams()
@@ -15,8 +15,8 @@ const Index = () => {
     const [isLoading, setLoading] = useState(true)
 
     const [author, setAuthor] = useState(null)
-    const [reciver, setReciver] = useState(null)
-    const [open, setOpen] = useState(false)
+    // const [reciver, setReciver] = useState(null)
+    // const [open, setOpen] = useState(false)
     const [header] = useState({
         headers: { Authorization: "Bearer " + localStorage.getItem('token') }
     })
@@ -46,16 +46,16 @@ const Index = () => {
 
 
     // Handle message box open
-    const handleOpen = data => {
-        setReciver(data.applicant)
-        setOpen(true)
-    }
+    // const handleOpen = data => {
+    //     setReciver(data.applicant)
+    //     setOpen(true)
+    // }
 
     // Handle close chat box
-    const handleClose = () => {
-        setOpen(true)
-        setReciver(null)
-    }
+    // const handleClose = () => {
+    //     setOpen(true)
+    //     setReciver(null)
+    // }
 
     // Change Applicant status
     const changeApplicantStatus = async (status, applicantId) => {
@@ -91,9 +91,9 @@ const Index = () => {
                                             <p style={{ fontSize: 13 }} className="text-success mb-4">Application Status - {items.status}</p>
                                         </div>
                                         <div className="ml-auto">
-                                            <button style={{ zIndex: 0 }} className="btn px-4 py-2" onClick={() => handleOpen(items)}>
+                                            {/* <button style={{ zIndex: 0 }} className="btn px-4 py-2" onClick={() => handleOpen(items)}>
                                                 <Icon icon={messageCircle} style={{ color: '#fff' }} size={20} />Chat
-                                            </button>
+                                            </button> */}
                                             <br />
 
                                             {items.status === "Pending" ?
@@ -128,14 +128,14 @@ const Index = () => {
                 </div>
             }
 
-            {reciver ?
+            {/* {reciver ?
                 <ChatLauncher
                     show={open}
                     author={author}
                     reciver={reciver}
                     onHide={handleClose}
                 />
-                : null}
+                : null} */}
 
         </div>
     )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Menu } from 'react-feather'
 import { Link, useHistory } from 'react-router-dom'
+// import {img} from '../../assets/icons/logo.png'
 import { Images } from '../../utils/Images'
 
 const Index = () => {

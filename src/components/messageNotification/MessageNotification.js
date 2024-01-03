@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import './style.scss'
-import Icon from 'react-icons-kit'
-import { comment } from 'react-icons-kit/fa'
-import { useHistory } from "react-router-dom"
+// import Icon from 'react-icons-kit'
+// import { comment } from 'react-icons-kit/fa'
+// import { useHistory } from "react-router-dom"
 
 import Requests from '../../utils/Requests/Index'
 
 export const MessageNotification = () => {
-    const history = useHistory()
+    // const history = useHistory()
     const [users, setUsers] = useState([])
     const [header] = useState({
         headers: { Authorization: "Bearer " + localStorage.getItem('token') }
@@ -29,7 +29,7 @@ export const MessageNotification = () => {
         <div className="message-notification-container">
 
             {/* clickable toggle button */}
-            <button
+            {/* <button
                 type="button"
                 className="notification-button shadow"
                 onClick={() => history.push("/home/account/applications")}
@@ -38,7 +38,7 @@ export const MessageNotification = () => {
                 <span className="notification-counter">
                     {users.length && users.length >= 10 ? "10+" : users.length}
                 </span>
-            </button>
+            </button> */}
 
             {/* Notifications container */}
             {/* {show ?
