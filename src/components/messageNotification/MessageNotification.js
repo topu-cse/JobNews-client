@@ -41,29 +41,7 @@ export const MessageNotification = () => {
             </button> */}
 
             {/* Notifications container */}
-            {/* {show ?
-                <div className="notifications-container shadow">
-                    {isLoading ? <p className="text-center">Loading ...</p> :
-                        users && users.length ?
-                            users.map((user, i) =>
-                                <div className="notification-item d-flex"
-                                    key={i}
-                                    onClick={() => {
-                                        setShow(false)
-                                        setReciver(user)
-                                        setLauncher(true)
-                                    }}
-                                >
-                                    <div className="actor-image-container">
-                                        <img src={user.image || Images.User} alt="..." />
-                                    </div>
-                                    <div className="actor-content-container">
-                                        <p>{user.name}</p>
-                                    </div>
-                                </div>
-                            ) : null}
-                </div>
-                : null} */}
+             
 
             {/* {reciver ?
                 <ChatLauncher
